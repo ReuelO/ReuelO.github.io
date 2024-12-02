@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/portfolio-site/",
+  base: "/reuelo.github.io/",
   plugins: [react()],
   css: {
     postcss: {
