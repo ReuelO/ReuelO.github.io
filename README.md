@@ -1,5 +1,3 @@
-# My Portfolio Site
-
 - 👋 Hi, I’m @ReuelO
 - 👀 I’m deeply interested in Web and Software Development
 - 🌱 I’m currently engaged actively in Web and Mobile Development
