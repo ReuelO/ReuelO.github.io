@@ -11,11 +11,11 @@ function App() {
   return (
     <>
       <Navbar />
-      <Home />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
+      <Home data-aos="fade-up" />
+      <About data-aos="fade-up" />
+      <Projects data-aos="fade-up" />
+      <Skills data-aos="fade-up" />
+      <Contact data-aos="fade-up" />
       <Footer />
     </>
   );
