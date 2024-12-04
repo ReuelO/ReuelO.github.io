@@ -33,7 +33,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="bg-cover bg-center "
+      className="bg-cover bg-center"
       style={{ backgroundImage: `url('/contact.jpg')` }}
     >
       <div className="flex flex-col items-center justify-center h-full bg-light-background dark:bg-dark-background bg-opacity-70 dark:bg-opacity-50 p-16">
@@ -42,9 +42,11 @@ const Contact = () => {
         </h2>
         <form
           onSubmit={handleSubmit}
-          className="max-w-lg mx-auto shadow-lg p-6 bg-gray-50 opacity-90 rounded"
+          className="max-w-lg mx-auto shadow-lg p-6 bg-light-background dark:bg-dark-background opacity-90 rounded"
         >
-          <p className="text-xl font-bold text-center mb-6">Reach Out</p>
+          <p className="text-xl text-light-text dark:text-dark-text font-bold text-center mb-6">
+            Reach Out
+          </p>
           <input
             type="text"
             name="name"

@@ -21,10 +21,10 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-cover bg-center "
-      style={{ backgroundImage: `url('/about.jpg')` }}
+      className="bg-cover bg-center"
+      style={{ backgroundImage: `url('/me.jpg')` }}
     >
-      <div className="flex flex-col items-center justify-center h-full bg-light-background dark:bg-dark-background bg-opacity-70 dark:bg-opacity-50 p-16">
+      <div className="flex flex-col items-center justify-center h-full md:w-96 object-none bg-light-background dark:bg-dark-background bg-opacity-50 dark:bg-opacity-50 p-16">
         <h2 className="text-3xl text-light-text dark:text-dark-text font-bold mb-6">
           About Me
         </h2>

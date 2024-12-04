@@ -28,7 +28,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="bg-cover bg-center "
+      className="bg-cover bg-center"
       style={{ backgroundImage: `url('/skills.jpg')` }}
     >
       <div className="flex flex-col items-center justify-center h-full bg-light-background dark:bg-dark-background bg-opacity-70 dark:bg-opacity-50 p-16">
