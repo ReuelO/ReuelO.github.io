@@ -1,35 +1,36 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
-
-const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_USERNAME;
-const GITHUB_REPO_NAME = GITHUB_USERNAME;
+import ReactMarkdown from "react-markdown";
 
 const About = () => {
-  const [readme, setReadme] = useState("");
+  const [markdownContent, setMarkdownContent] = useState("");
 
   useEffect(() => {
-    const fetchReadme = async () => {
+    const fetchMarkdown = async () => {
       try {
-        const response = await axios.get(
-          `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/master/README.md`
-        );
-        setReadme(response.data);
+        const response = await fetch("/README.md");
+        const text = await response.text();
+        setMarkdownContent(text);
       } catch (error) {
-        console.error("Error fetching README:", error);
+        console.error("Error fetching markdown:", error);
       }
     };
-    fetchReadme();
+
+    fetchMarkdown();
   }, []);
 
   return (
     <section
       id="about"
-      className="bg-cover bg-center"
+      className="bg-cover bg-center "
       style={{ backgroundImage: `url('/about.jpg')` }}
     >
-      <div className="flex flex-col items-center justify-center h-full bg-black bg-opacity-50 p-16">
-        <h2 className="text-3xl text-white font-bold mb-6">About Me</h2>
-        <p className="max-w-3xl mx-auto text-lg text-gray-200">{readme}</p>
+      <div className="flex flex-col items-center justify-center h-full bg-light-background dark:bg-dark-background bg-opacity-70 dark:bg-opacity-50 p-16">
+        <h2 className="text-3xl text-light-text dark:text-dark-text font-bold mb-6">
+          About Me
+        </h2>
+        <p className="prose max-w-3xl mx-auto text-lg text-light-text dark:text-dark-text">
+          <ReactMarkdown>{markdownContent}</ReactMarkdown>
+        </p>
       </div>
     </section>
   );

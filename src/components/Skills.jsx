@@ -28,16 +28,18 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="bg-cover bg-center"
+      className="bg-cover bg-center "
       style={{ backgroundImage: `url('/skills.jpg')` }}
     >
-      <div className="flex flex-col items-center justify-center h-full bg-black bg-opacity-50 p-16">
-        <h2 className="text-3xl text-white font-bold mb-6">Skills</h2>
+      <div className="flex flex-col items-center justify-center h-full bg-light-background dark:bg-dark-background bg-opacity-70 dark:bg-opacity-50 p-16">
+        <h2 className="text-3xl text-light-text dark:text-dark-text font-bold mb-6">
+          Skills
+        </h2>
         <div className="flex justify-center space-x-4 flex-wrap">
           {languages.map((language, index) => (
             <span
               key={index}
-              className="bg-gray-100 text-white px-4 py-2 rounded-lg hover:bg-white transition w-50"
+              className="bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text px-4 py-2 rounded-lg hover:bg-light-background dark:hover:bg-dark-background transition w-50"
             >
               <div
                 key={language}

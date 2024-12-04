@@ -33,40 +33,17 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="bg-cover bg-center"
+      className="bg-cover bg-center "
       style={{ backgroundImage: `url('/contact.jpg')` }}
     >
-      <div className="flex flex-col items-center justify-center h-full bg-black bg-opacity-50 p-16">
-        <h2 className="text-3xl text-white font-bold text-center mb-6">
+      <div className="flex flex-col items-center justify-center h-full bg-light-background dark:bg-dark-background bg-opacity-70 dark:bg-opacity-50 p-16">
+        <h2 className="text-3xl text-light-text dark:text-dark-text font-bold text-center mb-6">
           Contact
         </h2>
         <form
           onSubmit={handleSubmit}
           className="max-w-lg mx-auto shadow-lg p-6 bg-gray-50 opacity-90 rounded"
         >
-          <div className="bg-white text-center p-4 my-4">
-            {profile && (
-              <>
-                <p>
-                  <strong>GitHub:</strong>{" "}
-                  <a
-                    href={profile.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-500"
-                  >
-                    {profile.html_url}
-                  </a>
-                </p>
-                {profile.email && (
-                  <p>
-                    <strong>Email:</strong> {profile.email}
-                  </p>
-                )}
-              </>
-            )}
-          </div>
-
           <p className="text-xl font-bold text-center mb-6">Reach Out</p>
           <input
             type="text"
@@ -97,7 +74,7 @@ const Contact = () => {
           />
           <button
             type="submit"
-            className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-400"
+            className="bg-light-accent dark:bg-dark-accent font-bold text-dark-text px-6 py-2 rounded hover:bg-light-accentHover hover:dark:bg-dark-accentHover"
           >
             Send Message
           </button>

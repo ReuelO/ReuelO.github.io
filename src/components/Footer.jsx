@@ -4,14 +4,14 @@ const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_USERNAME;
 const PROFILE_URL = `https://github.com/${GITHUB_USERNAME}`;
 
 const Footer = () => (
-  <footer className="bg-gray-800 text-white text-center p-4">
+  <footer className="bg-dark-background dark:bg-light-background text-dark-text dark:text-light-text text-center p-4">
     <p>
       &copy; {new Date().getFullYear()} Check my profile on{" "}
       <a
         href={PROFILE_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-blue-500"
+        className="font-bold text-light-accent dark:text-dark-accent"
       >
         GitHub
       </a>

@@ -9,7 +9,7 @@ import "./index.css";
 
 function App() {
   return (
-    <>
+    <div className="bg-light-background dark:bg-dark-background">
       <Navbar />
       <Home data-aos="fade-up" />
       <About data-aos="fade-up" />
@@ -17,7 +17,7 @@ function App() {
       <Skills data-aos="fade-up" />
       <Contact data-aos="fade-up" />
       <Footer />
-    </>
+    </div>
   );
 }
 
