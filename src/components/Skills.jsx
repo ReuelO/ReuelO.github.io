@@ -39,14 +39,16 @@ const Skills = () => {
           {languages.map((language, index) => (
             <span
               key={index}
-              className="bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text px-4 py-2 rounded-lg hover:bg-light-background dark:hover:bg-dark-background transition w-50"
+              className="bg-light-background dark:bg-dark-background px-4 py-2 rounded-lg hover:bg-light-background dark:hover:bg-dark-background transition w-50"
             >
               <div
                 key={language}
-                className="flex flex-col items-center text-black"
+                className="flex flex-col items-center text-light-text dark:text-dark-text"
               >
                 {languageIcons[language] || <span>{language}</span>}
-                <p className="mt-2 text-sm text-gray-800">{language}</p>
+                <p className="mt-2 text-sm text-light-textSecondary dark:text-dark-textSecondary">
+                  {language}
+                </p>
               </div>
             </span>
           ))}

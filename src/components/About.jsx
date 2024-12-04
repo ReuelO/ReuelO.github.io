@@ -28,9 +28,9 @@ const About = () => {
         <h2 className="text-3xl text-light-text dark:text-dark-text font-bold mb-6">
           About Me
         </h2>
-        <p className="prose max-w-3xl mx-auto text-lg text-light-text dark:text-dark-text">
-          <ReactMarkdown>{markdownContent}</ReactMarkdown>
-        </p>
+        <ReactMarkdown className="prose max-w-3xl mx-auto text-lg text-light-text dark:text-dark-text">
+          {markdownContent}
+        </ReactMarkdown>
       </div>
     </section>
   );
